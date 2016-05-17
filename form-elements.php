@@ -17,7 +17,6 @@ if (isset($_GET['id'])) {
     $query1 = mysqli_query($conn, "select * from user where id='$id'");
     $query2 = mysqli_fetch_assoc($query1);
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
