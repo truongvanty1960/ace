@@ -999,147 +999,207 @@
                         </div><!-- /.pull-left -->
                     </div><!-- /.ace-settings-box -->
                 </div><!-- /.ace-settings-container -->
+                <form action="" method="post">
+                    <div class="page-header">
+                        <h1>FORM UPLOAD BAI VIET </h1>
+                    </div><!-- /.page-header -->
 
-                <div class="page-header">
-                    <h1>FORM UPLOAD BAI VIET </h1>
-                </div><!-- /.page-header -->
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
-                        <h5>
-                            <b>Title<span class="red">*</span></b>
-                            <div class="space-2"></div>
-                            <div>
-                                <input type="text" placeholder="Enter title here" name="title"
-                                       class="col-xs-10 col-sm-10"/><BR><BR><BR>
-
-                            </div>
-                            <div><b>Content<span class="blue">*</span></b></div>
-
-
-                            <div class="wysiwyg-editor " id="editor1"></div>
-                            <BR>
-
-                            <div>
-                                <b>Category<span class="green">*</span></b>
-                                <select  name="category">
-                                    <option value="">Select...</option>
-                                    <option value="S">SEX</option>
-                                    <option value="M">MONNEY</option>
-                                    <option value="G">GIRL</option>
-                                    <option value="H">hohohohoho</option>
-                                </select></div>
-                            <div class="space-8"></div>
-                            <div>
-                                <label class="control-label no-padding-right" for="form-field-tags"><b>Tag input</b></label>
-
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- PAGE CONTENT BEGINS -->
+                            <h5>
+                                <b>Title<span class="red">*</span></b>
+                                <div class="space-2"></div>
                                 <div>
-                                    <div class="inline">
-                                        <input type="text" name="tags" id="form-field-tags" value="Vanthang" placeholder="Enter tags ..." />
+                                    <input type="text" placeholder="Enter title here" name="title"
+                                           class="col-xs-10 col-sm-10"/><BR><BR><BR>
+
+                                </div>
+                                <div><b>Content<span class="blue">*</span></b></div>
+                                <div class="col-sm-7">
+                                    <h4 class="header green">Markdown Editor</h4>
+                                    <div class="widget-box widget-color-blue">
+                                        <div class="widget-header widget-header-small"></div>
+                                        <div class="widget-body">
+                                            <div class="widget-main no-padding">
+                            													<textarea name="content"
+                                                                                          data-provide="markdown"
+                                                                                          data-iconlibrary="fa"
+                                                                                          rows="10">**Markdown Editor** inside a *widget box*
+
+                            - list item 1
+                            - list item 2
+                            - list item 3</textarea>
+                                            </div>
+
+                                            <div class="widget-toolbox padding-4 clearfix">
+                                                <div class="btn-group pull-left">
+                                                    <button class="btn btn-sm btn-info">
+                                                        <i class="ace-icon fa fa-times bigger-125"></i>
+                                                        Cancel
+                                                    </button>
+                                                </div>
+
+                                                <div class="btn-group pull-right">
+                                                    <button class="btn btn-sm btn-purple">
+                                                        <i class="ace-icon fa fa-floppy-o bigger-125"></i>
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!--                               <div class="wysiwyg-editor" id="editor1" name="editor"></div>-->
+
+                                <div>
+                                    <b>Category<span class="green">*</span></b>
+                                    <select name="category">
+                                        <option value="">Select...</option>
+                                        <option value="S">SEX</option>
+                                        <option value="M">MONNEY</option>
+                                        <option value="G">GIRL</option>
+                                        <option value="H">hohohohoho</option>
+                                    </select></div>
+                                <div class="space-8"></div>
+                                <div>
+                                    <label class="control-label no-padding-right" for="form-field-tags"><b>Tag input</b></label>
+
+                                    <div>
+                                        <div class="inline">
+                                            <input type="text" name="tags" id="form-field-tags" value="Vanthang"
+                                                   placeholder="Enter tags ..."/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h5>
+                            <div class="clearfix form-actions">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn btn-info" type="submit" name="btn_submit">
+                                        <i class="ace-icon fa fa-check bigger-110"></i>
+                                        Submit
+                                    </button>
+                                    <button class="btn" type="reset">
+                                        <i class="ace-icon fa fa-undo bigger-110"></i>
+                                        Reset
+                                    </button>
+                                </div>
+
                             </div>
-                        </h5>
-                        <div class="clearfix form-actions">
-                            <div class="col-md-offset-3 col-md-9">
-                                <button class="btn btn-info" type="submit" name="btn_submit">
-                                    <i class="ace-icon fa fa-check bigger-110"></i>
-                                    Submit
-                                </button>
 
 
-                                <button class="btn" type="reset">
-                                    <i class="ace-icon fa fa-undo bigger-110"></i>
-                                    Reset
-                                </button>
-                            </div>
+                            <!--                        <div class="row">-->
+                            <!--                            <div class="col-sm-5">-->
+                            <!--                                <h4 class="header blue">Inside Widget</h4>-->
+                            <!---->
+                            <!--                                <div class="widget-box widget-color-green">-->
+                            <!--                                    <div class="widget-header widget-header-small"></div>-->
+                            <!---->
+                            <!--                                    <div class="widget-body">-->
+                            <!--                                        <div class="widget-main no-padding">-->
+                            <!--                                            <div class="wysiwyg-editor" id="editor2"></div>-->
+                            <!--                                        </div>-->
+                            <!---->
+                            <!--                                        <div class="widget-toolbox padding-4 clearfix">-->
+                            <!--                                            <div class="btn-group pull-left">-->
+                            <!--                                                <button class="btn btn-sm btn-default btn-white btn-round">-->
+                            <!--                                                    <i class="ace-icon fa fa-times bigger-125"></i>-->
+                            <!--                                                    Cancel-->
+                            <!--                                                </button>-->
+                            <!--                                            </div>-->
+                            <!---->
+                            <!--                                            <div class="btn-group pull-right">-->
+                            <!--                                                <button class="btn btn-sm btn-danger btn-white btn-round">-->
+                            <!--                                                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>-->
+                            <!--                                                    Save-->
+                            <!--                                                </button>-->
+                            <!---->
+                            <!--                                                <button class="btn btn-sm btn-success btn-white btn-round">-->
+                            <!--                                                    <i class="ace-icon fa fa-globe bigger-125"></i>-->
+                            <!---->
+                            <!--                                                    Publish-->
+                            <!--                                                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-125"></i>-->
+                            <!--                                                </button>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <!---->
+<!--                            <div class="col-sm-7">-->
+<!--                                <h4 class="header green">Markdown Editor</h4>-->
+<!---->
+<!--                                <div class="widget-box widget-color-blue">-->
+<!--                                    <div class="widget-header widget-header-small"></div>-->
+<!---->
+<!--                                    <div class="widget-body">-->
+<!--                                        <div class="widget-main no-padding">-->
+<!--                            													<textarea name="content"-->
+<!--                                                                                          data-provide="markdown"-->
+<!--                                                                                          data-iconlibrary="fa"-->
+<!--                                                                                          rows="10">**Markdown Editor** inside a *widget box*-->
+<!---->
+<!--                            - list item 1-->
+<!--                            - list item 2-->
+<!--                            - list item 3</textarea>-->
+<!--                                        </div>-->
+<!---->
+<!--                                        <div class="widget-toolbox padding-4 clearfix">-->
+<!--                                            <div class="btn-group pull-left">-->
+<!--                                                <button class="btn btn-sm btn-info">-->
+<!--                                                    <i class="ace-icon fa fa-times bigger-125"></i>-->
+<!--                                                    Cancel-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!---->
+<!--                                            <div class="btn-group pull-right">-->
+<!--                                                <button class="btn btn-sm btn-purple">-->
+<!--                                                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>-->
+<!--                                                    Save-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <!--                        </div>-->
+                            <script type="text/javascript">
+                                var $path_assets = "dist";//this will be used in loading jQuery UI if needed!
+                            </script>
+                            <!-- PAGE CONTENT ENDS -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </form>
+                <?php
+               // session_start();
+                require_once("connection.php");
+                if (isset($_POST["btn_submit"])) {
+                    //lấy thông tin từ các form bằng phương thức POST
+//                    print_r($_POST);
+                //    die;
+                    $titles = $_POST["title"];
+                    $contents = $_POST["content"];
+                    $categorys = $_POST["category"];
+                    //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
+                    if ($titles == "" || $contents == "") {
+                        echo "bạn vui lòng nhập đầy đủ thông tin";
+                    } else {
+                        //thực hiện việc lưu trữ dữ liệu vào db
+                        $sql = "INSERT INTO post(
+    					title,
+    					content,
+    					category
+    					) VALUES (
+    					'$titles',
+    					'$contents', '$categorys')";
+                        // thực thi câu $sql với biến conn lấy từ file connection.php
+                        mysqli_query($conn, $sql);
+                        echo "chúc mừng bạn đã up load thành công";
+                    }
+                }
+                ?>
 
-                        </div>
-
-
-
-                        <!--                        <div class="row">-->
-                        <!--                            <div class="col-sm-5">-->
-                        <!--                                <h4 class="header blue">Inside Widget</h4>-->
-                        <!---->
-                        <!--                                <div class="widget-box widget-color-green">-->
-                        <!--                                    <div class="widget-header widget-header-small"></div>-->
-                        <!---->
-                        <!--                                    <div class="widget-body">-->
-                        <!--                                        <div class="widget-main no-padding">-->
-                        <!--                                            <div class="wysiwyg-editor" id="editor2"></div>-->
-                        <!--                                        </div>-->
-                        <!---->
-                        <!--                                        <div class="widget-toolbox padding-4 clearfix">-->
-                        <!--                                            <div class="btn-group pull-left">-->
-                        <!--                                                <button class="btn btn-sm btn-default btn-white btn-round">-->
-                        <!--                                                    <i class="ace-icon fa fa-times bigger-125"></i>-->
-                        <!--                                                    Cancel-->
-                        <!--                                                </button>-->
-                        <!--                                            </div>-->
-                        <!---->
-                        <!--                                            <div class="btn-group pull-right">-->
-                        <!--                                                <button class="btn btn-sm btn-danger btn-white btn-round">-->
-                        <!--                                                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>-->
-                        <!--                                                    Save-->
-                        <!--                                                </button>-->
-                        <!---->
-                        <!--                                                <button class="btn btn-sm btn-success btn-white btn-round">-->
-                        <!--                                                    <i class="ace-icon fa fa-globe bigger-125"></i>-->
-                        <!---->
-                        <!--                                                    Publish-->
-                        <!--                                                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-125"></i>-->
-                        <!--                                                </button>-->
-                        <!--                                            </div>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!---->
-                        <!--                            <div class="col-sm-7">-->
-                        <!--                                <h4 class="header green">Markdown Editor</h4>-->
-                        <!---->
-                        <!--                                <div class="widget-box widget-color-blue">-->
-                        <!--                                    <div class="widget-header widget-header-small"></div>-->
-                        <!---->
-                        <!--                                    <div class="widget-body">-->
-                        <!--                                        <div class="widget-main no-padding">-->
-                        <!--													<textarea name="content" data-provide="markdown"-->
-                        <!--                                                              data-iconlibrary="fa" rows="10">**Markdown Editor** inside a *widget box*-->
-                        <!---->
-                        <!--- list item 1-->
-                        <!--- list item 2-->
-                        <!--- list item 3</textarea>-->
-                        <!--                                        </div>-->
-                        <!---->
-                        <!--                                        <div class="widget-toolbox padding-4 clearfix">-->
-                        <!--                                            <div class="btn-group pull-left">-->
-                        <!--                                                <button class="btn btn-sm btn-info">-->
-                        <!--                                                    <i class="ace-icon fa fa-times bigger-125"></i>-->
-                        <!--                                                    Cancel-->
-                        <!--                                                </button>-->
-                        <!--                                            </div>-->
-                        <!---->
-                        <!--                                            <div class="btn-group pull-right">-->
-                        <!--                                                <button class="btn btn-sm btn-purple">-->
-                        <!--                                                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>-->
-                        <!--                                                    Save-->
-                        <!--                                                </button>-->
-                        <!--                                            </div>-->
-                        <!--                                        </div>-->
-                        <!--                                    </div>-->
-                        <!--                                </div>-->
-                        <!--                            </div>-->
-                        <!--                        </div>-->
-
-                        <script type="text/javascript">
-                            var $path_assets = "dist";//this will be used in loading jQuery UI if needed!
-                        </script>
-
-                        <!-- PAGE CONTENT ENDS -->
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
             </div><!-- /.page-content -->
         </div>
     </div><!-- /.main-content -->
@@ -1151,7 +1211,6 @@
 							<span class="blue bolder">Ace</span>
 							Application &copy; 2013-2014
 						</span>
-
                 &nbsp; &nbsp;
 						<span class="action-buttons">
 							<a href="#">
@@ -1381,10 +1440,10 @@
              */
         }
         var tag_input = $('#form-field-tags');
-        try{
+        try {
             tag_input.tag(
                 {
-                    placeholder:tag_input.attr('placeholder'),
+                    placeholder: tag_input.attr('placeholder'),
                     //enable typeahead by specifying the source array
                     source: ace.vars['US_STATES'],//defined in ace.js >> ace.enable_search_ahead
                     /**
@@ -1403,12 +1462,11 @@
             var $tag_obj = $('#form-field-tags').data('tag');
             $tag_obj.add('hkjJHKJHjkHJKhH');
         }
-        catch(e) {
+        catch (e) {
             //display a textarea for old IE, because it doesn't support this plugin or another one I tried!
-            tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
+            tag_input.after('<textarea id="' + tag_input.attr('id') + '" name="' + tag_input.attr('name') + '" rows="3">' + tag_input.val() + '</textarea>').remove();
             //$('#form-field-tags').autosize({append: "\n"});
         }
-
 
 
     });
