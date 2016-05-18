@@ -1053,17 +1053,18 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--                               <div class="wysiwyg-editor" id="editor1" name="editor"></div>-->
-
                                 <div>
                                     <b>Category<span class="green">*</span></b>
-                                    <select name="category">
-                                        <option value="">Select...</option>
-                                        <option value="S">SEX</option>
-                                        <option value="M">MONNEY</option>
-                                        <option value="G">GIRL</option>
-                                        <option value="H">hohohohoho</option>
+                                    <select id="category" name="category">
+                                        <option value="nill">Select Category</option>
+                                        <?php
+                                        require_once("connection.php");
+                                        $category = mysqli_query($conn, "SELECT category_name FROM category WHERE 1");
+                                        while ($row = mysqli_fetch_array($category)) {
+                                            echo "<option value= '" . $row['category_name'] . "' > " . $row['category_name'] . "</option>";
+                                        }
+                                        mysqli_close($conn);
+                                        ?>
                                     </select></div>
                                 <div class="space-8"></div>
                                 <div>
@@ -1090,83 +1091,6 @@
                                 </div>
 
                             </div>
-
-
-                            <!--                        <div class="row">-->
-                            <!--                            <div class="col-sm-5">-->
-                            <!--                                <h4 class="header blue">Inside Widget</h4>-->
-                            <!---->
-                            <!--                                <div class="widget-box widget-color-green">-->
-                            <!--                                    <div class="widget-header widget-header-small"></div>-->
-                            <!---->
-                            <!--                                    <div class="widget-body">-->
-                            <!--                                        <div class="widget-main no-padding">-->
-                            <!--                                            <div class="wysiwyg-editor" id="editor2"></div>-->
-                            <!--                                        </div>-->
-                            <!---->
-                            <!--                                        <div class="widget-toolbox padding-4 clearfix">-->
-                            <!--                                            <div class="btn-group pull-left">-->
-                            <!--                                                <button class="btn btn-sm btn-default btn-white btn-round">-->
-                            <!--                                                    <i class="ace-icon fa fa-times bigger-125"></i>-->
-                            <!--                                                    Cancel-->
-                            <!--                                                </button>-->
-                            <!--                                            </div>-->
-                            <!---->
-                            <!--                                            <div class="btn-group pull-right">-->
-                            <!--                                                <button class="btn btn-sm btn-danger btn-white btn-round">-->
-                            <!--                                                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>-->
-                            <!--                                                    Save-->
-                            <!--                                                </button>-->
-                            <!---->
-                            <!--                                                <button class="btn btn-sm btn-success btn-white btn-round">-->
-                            <!--                                                    <i class="ace-icon fa fa-globe bigger-125"></i>-->
-                            <!---->
-                            <!--                                                    Publish-->
-                            <!--                                                    <i class="ace-icon fa fa-arrow-right icon-on-right bigger-125"></i>-->
-                            <!--                                                </button>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                            </div>-->
-                            <!---->
-<!--                            <div class="col-sm-7">-->
-<!--                                <h4 class="header green">Markdown Editor</h4>-->
-<!---->
-<!--                                <div class="widget-box widget-color-blue">-->
-<!--                                    <div class="widget-header widget-header-small"></div>-->
-<!---->
-<!--                                    <div class="widget-body">-->
-<!--                                        <div class="widget-main no-padding">-->
-<!--                            													<textarea name="content"-->
-<!--                                                                                          data-provide="markdown"-->
-<!--                                                                                          data-iconlibrary="fa"-->
-<!--                                                                                          rows="10">**Markdown Editor** inside a *widget box*-->
-<!---->
-<!--                            - list item 1-->
-<!--                            - list item 2-->
-<!--                            - list item 3</textarea>-->
-<!--                                        </div>-->
-<!---->
-<!--                                        <div class="widget-toolbox padding-4 clearfix">-->
-<!--                                            <div class="btn-group pull-left">-->
-<!--                                                <button class="btn btn-sm btn-info">-->
-<!--                                                    <i class="ace-icon fa fa-times bigger-125"></i>-->
-<!--                                                    Cancel-->
-<!--                                                </button>-->
-<!--                                            </div>-->
-<!---->
-<!--                                            <div class="btn-group pull-right">-->
-<!--                                                <button class="btn btn-sm btn-purple">-->
-<!--                                                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>-->
-<!--                                                    Save-->
-<!--                                                </button>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                            <!--                        </div>-->
                             <script type="text/javascript">
                                 var $path_assets = "dist";//this will be used in loading jQuery UI if needed!
                             </script>
@@ -1175,12 +1099,12 @@
                     </div><!-- /.row -->
                 </form>
                 <?php
-               // session_start();
+                // session_start();
                 require_once("connection.php");
                 if (isset($_POST["btn_submit"])) {
                     //lấy thông tin từ các form bằng phương thức POST
 //                    print_r($_POST);
-                //    die;
+                    //    die;
                     $titles = $_POST["title"];
                     $contents = $_POST["content"];
                     $descriptions = $_POST["description"];
