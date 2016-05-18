@@ -1012,12 +1012,15 @@
                                 <div class="space-2"></div>
                                 <div>
                                     <input type="text" placeholder="Enter title here" name="title"
-                                           class="col-xs-10 col-sm-10"/><BR><BR><BR>
-
+                                           class="col-xs-10 col-sm-10"/><BR><BR>
+                                </div>
+                                <div><b>Description</b></div>
+                                <div>
+                                    <input type="text" placeholder="Enter description here" name="description"
+                                           class="col-xs-10 col-sm-10"/><BR><BR>
                                 </div>
                                 <div><b>Content<span class="blue">*</span></b></div>
                                 <div class="col-sm-7">
-                                    <h4 class="header green">Markdown Editor</h4>
                                     <div class="widget-box widget-color-blue">
                                         <div class="widget-header widget-header-small"></div>
                                         <div class="widget-body">
@@ -1180,7 +1183,8 @@
                 //    die;
                     $titles = $_POST["title"];
                     $contents = $_POST["content"];
-                    $categorys = $_POST["category"];
+                    $descriptions = $_POST["description"];
+                    $category = $_POST["category"];
                     //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
                     if ($titles == "" || $contents == "") {
                         echo "bạn vui lòng nhập đầy đủ thông tin";
@@ -1189,10 +1193,11 @@
                         $sql = "INSERT INTO post(
     					title,
     					content,
-    					category
+    					category,
+    					description
     					) VALUES (
     					'$titles',
-    					'$contents', '$categorys')";
+    					'$contents', '$category', '$descriptions')";
                         // thực thi câu $sql với biến conn lấy từ file connection.php
                         mysqli_query($conn, $sql);
                         echo "chúc mừng bạn đã up load thành công";
